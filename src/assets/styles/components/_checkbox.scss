@@ -1,0 +1,79 @@
+$time: 0.3s;
+$color: #BA3737;
+$color_hover: #5D1C1C;
+
+.wrap-custom-box {
+    position: relative;
+    padding-left: 23px;
+    min-height: 16px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    
+    .checkmark-ckb {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        background: transparent;
+        border: 1px solid #D0D0D0;
+        transition: $time / 2;
+        border-radius: 1px;
+    }
+
+    .checkmark-ckb {
+        transition: 0s;
+    }
+
+    // Checkbox
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        display: none;
+    }
+
+    &:hover input[type="checkbox"] ~ .checkmark-ckb {
+        background-color: #FFF4EB;
+    }
+
+    input[type="checkbox"]:checked ~ .checkmark-ckb {
+        background-color: $color;
+        border-color:  $color;
+    }
+
+    input[type="checkbox"]:checked ~ .checkmark-ckb:hover {
+      background-color: $color_hover;
+      border-color:  $color_hover;
+  }
+    
+    input[type="checkbox"]:disabled ~ .checkmark-ckb {
+        background-color: #eee;
+        cursor: not-allowed;
+    }
+
+    .checkmark-ckb:after {
+        content: "";
+        position: absolute;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: $time;
+    }
+
+    .checkmark-ckb:after {
+        transition: 0s;
+    }
+
+    input[type="checkbox"]:checked ~ .checkmark-ckb:after {
+        opacity: 1;
+        left: 5px;
+        top: 1px;
+        width: 5px;
+        height: 9px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+}

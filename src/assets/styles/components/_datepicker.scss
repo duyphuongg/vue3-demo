@@ -1,0 +1,256 @@
+$primary: #BA3737;
+$primary-light-1: #F8EBEB;
+.dp-custom-wrapper{
+    *{
+        font-family: 'Inter', sans-serif !important;
+    }
+    border: none !important;
+    // border-radius: 0px 4px 4px 0px !important;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+    .ranges {
+        right: calc(100%);
+        top: 0px;
+        border-right: 1px solid #ddd;
+    
+        width: max-content;
+        background-color: #fff;
+    
+        ul{
+            height: calc(100% - 48px);
+            padding-top: 20px;
+            border-top-left-radius: 4px;
+
+            li{
+                height: 32px;
+                padding: 5.5px 15px;
+                line-height: 21px;
+                cursor: pointer;
+                &.active, &:hover{
+                    background: #f1f1f1;
+                }
+            }
+        }
+    }
+
+    .dp__arrow_top{
+        display: none;
+    }
+
+    .dp__calendar_wrapper{
+        padding: 16px;
+        .dp__calendar{
+            .dp__month_year_row{
+                margin-bottom: 16px;
+                .dp__month_year_select{
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #202020;
+    
+                    &:hover{
+                        background: unset;
+                        pointer-events: none;
+                    }
+                }
+
+                & > div:nth-child(2){
+                    justify-content: flex-end;
+                    margin-right: 4px;
+                }
+                & > div:nth-child(3){
+                    justify-content: flex-start;
+                }
+                
+                .dp__inner_nav svg{
+                    height: unset;
+                    width: unset;
+                }
+            }
+    
+            .dp__calendar_wrap{
+                .db__calendar_header{
+                    margin-bottom: 6px;
+                    height: 18px;
+                    align-items: flex-start;
+                }
+                .dp__calendar_header_item{
+                    padding: 0px !important;
+                    height: 15px;
+                    width: 36px;
+                    font-weight: 400;
+                    font-size: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #6C6C6C;
+                }
+                .dp__calendar_header_separator{
+                    display: none;
+                }
+                .dp__calendar{
+                    &_row{
+                        margin: 0px 0px 2px;
+                    }
+                    &_item{
+                        .dp__cell_inner{
+                            height: 36px;
+                            width: 36px;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 21px;
+                            color: #202020;
+                            padding: 0px;
+
+                            span{
+                                display: flex;
+                                align-items: center;
+                                justify-content:center;
+                                width: 100%;
+                                height: 100%;
+                            }
+    
+                            &.dp__today{
+                                border-color: $primary;
+                            }
+                            &.dp__active_date{
+                                background-color: $primary;
+                                color: #fff;
+                            }
+
+                            &.dp__range_start, &.dp__range_end{
+                                background: $primary;
+                                color: #fff;
+                            }
+                            &.dp__range_start.dp__range_end{
+                                border-radius: 4px;
+                            }
+
+                            &.dp__range_between{
+                                background: $primary-light-1;
+                                border-color: $primary-light-1;
+                            }
+                            
+                            &.dp__date_hover_end, &.dp__date_hover_start, &.dp__date_hover{
+                                &:hover{
+                                    background: $primary-light-1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .dp__calendar_next{
+            .dp__month_year_row{
+
+                & > div:nth-child(1){
+                    justify-content: flex-end;
+                    margin-right: 4px;
+                }
+                & > div:nth-child(2){
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+        .dp__calendar_next {
+            margin-left: 20px;
+        }
+    }
+    
+    .dp__action_row{
+        display: none;
+        width: 100% !important;
+        padding: 0px;
+        justify-content: flex-end;
+    }
+
+    .dp__selection_preview{
+        display: none;
+    }
+
+    &.daterangepicker{
+        .dp__action_row{
+            display: flex;
+        }
+
+        &.multi-select{
+            .dp__calendar_wrapper{
+                padding: 0 16px 0 0;
+                .dp__calendar{
+                    padding: 16px 0px;
+                }
+                .ranges{
+                    margin-right: 16px;
+                }
+            }
+            .dp__action_row{
+                padding-top: 16px;
+                border-top: 1px solid #ddd;
+                border-radius: 0px 0px 4px 4px;
+            }
+        }
+    }
+
+}
+
+.dp__main{
+    width: 180px;
+    height: 32px;
+    font-family: 'Inter', sans-serif !important;
+
+    button, input, optgroup, select, textarea {
+        font-family: 'Inter', sans-serif !important;
+    }
+
+    &.is-show{
+        .dp__input_wrap{
+            .dp__input{
+                border: 1px solid #9C9C9C;
+            }
+        }
+    }
+
+    .dp__input_wrap{
+        .dp__input{
+            border: 1px solid #CFCFD1;
+            padding: 3px 32px 3px 12px;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            font-weight: 400;
+            
+            &::placeholder{
+                color: #121212 !important;
+                opacity: 1;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px !important;
+            }
+
+            &:hover{
+                border-color: #9C9C9C;
+                box-shadow: 0px 0px 0px 3px #F1F1F1;
+            }
+
+            &_icon{
+                left: unset;
+                right: 12px;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .text-daterangepicker {
+        font-size: 14px;
+        position: absolute;
+        left: 12px;
+        top: 5px;
+        cursor: pointer;
+    }
+}

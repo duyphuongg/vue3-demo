@@ -1,0 +1,73 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply text-default;
+    }
+    body{
+        @apply text-14 leading-21 font-normal;
+    }
+    h1 {
+        @apply font-heading text-36 leading-50 font-semibold;
+    }
+    h2 {
+        @apply font-heading text-30 leading-44 font-semibold;
+    }
+    h3 {
+        @apply font-heading text-24 leading-36 font-semibold;
+    }
+    h4 {
+        @apply font-heading text-20 leading-28 font-semibold;
+    }
+}
+
+@layer components {
+    /* small */
+    .body-small {
+        @apply text-12 leading-18 font-normal;
+    }
+    .body-small-smbold {
+        @apply text-12 leading-18 font-semibold;
+    }
+    .body-small-bold {
+        @apply text-12 leading-auto font-bold;
+    }
+    /* base */
+    .body-base {
+        @apply text-14 leading-21 font-normal;
+    }
+    .body-base-smbold {
+        @apply text-14 leading-21 font-semibold;
+    }
+    .body-base-bold {
+        @apply text-14 leading-auto font-bold;
+    }
+    /* large */
+    .body-large {
+        @apply text-16 leading-24 font-normal;
+    }
+    .body-large-smbold {
+        @apply text-16 leading-24 font-semibold;
+    }
+    .body-large-bold {
+        @apply text-16 leading-auto font-bold;
+    }
+    /* xlarge */
+    .body-xlarge {
+        @apply text-18 leading-27 font-normal;
+    }
+    .body-xlarge-smbold {
+        @apply text-18 leading-27 font-semibold;
+    }
+    .body-xlarge-bold {
+        @apply text-18 leading-27 font-bold;
+    }
+
+    .luniq-center{
+        @apply flex items-center justify-center;
+    }
+}
