@@ -6,9 +6,6 @@
     >
       <img class="absolute top-0 right-0" src="@/modules/auth/images/circle-top.svg" />
       <div>
-        <div class="relative flex justify-center items-center">
-          <img class="absolute top-[-80px]" src="@/modules/auth/images/logo.svg" alt="" />
-        </div>
         <div class="card-item w-[400px] h-[200px] z-[999]">
           <swiper :modules="modules" :slides-per-view="1" :autoplay="true" :pagination="{ clickable: true }">
             <swiper-slide v-for="(item, idx) in state.arrContent" :key="idx" class="px-5 pt-6">
@@ -103,7 +100,9 @@
               class="text-blue-600"
               target="_blank"
               href="https://www.shopify.com/free-trial?ref=fireapps&utm_campaign=alireviews"
-            >Create your store</a>
+            >
+              Create your store
+            </a>
           </div>
         </div>
       </div>

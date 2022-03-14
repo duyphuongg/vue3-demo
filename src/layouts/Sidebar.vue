@@ -2,10 +2,7 @@
   <div class="sidebar flex flex-col fixed z-[1] inset-y-0 w-[64px] min993:w-[240px] bg-dark-5">
     <div class="relative flex-1 flex flex-col min-h-0 border-r border-gray-200">
       <div class="absolute inset-y-0 h-[96px] py-[30px] px-[15px] min993:px-[20px] w-[100%]">
-        <router-link to="/">
-          <img :src="require('@/assets/images/logo.svg')" class="block min993:hidden w-[34px] h-[34px]" />
-          <img :src="require('@/assets/images/logo-full.svg')" class="hidden min993:block" />
-        </router-link>
+        <router-link to="/"> <p class="text-white">LOGO</p> </router-link>
       </div>
       <div class="sidebar__list-menu flex-1 flex flex-col mt-[96px]">
         <collapse-component
